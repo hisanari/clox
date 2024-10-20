@@ -309,7 +309,7 @@ static void varDeclaration() {
         emitByte(OP_NIL);
     }
     consume(TOKEN_SEMICOLON, "Expect `;` after variable declaration.");
-    defineVariable(global =);
+    defineVariable(global);
 }
 
 static void expressionStatement() {
@@ -372,8 +372,6 @@ bool compile(const char* source, Chunk* chunk) {
     parser.panicMode = false;
 
     advance();
-    // expression();
-    // consume(TOKEN_EOF, "Expect end of expression.");
 
     while (!match(TOKEN_EOF)) {
         declaration();
