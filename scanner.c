@@ -4,6 +4,7 @@
 #include "common.h"
 #include "scanner.h"
 
+// 字句解析
 typedef struct {
     const char* start;
     const char* current;
@@ -26,6 +27,7 @@ static bool isDigit(char c) {
     return c >= '0' && c <= '9';
 }
 
+// 文字列終了判定
 static bool isAtEnd() {
     return *scanner.current == '\0';
 }
@@ -35,6 +37,7 @@ static char advance() {
     return scanner.current[-1];
 }
 
+// 現在の文字列を返す関数
 static char peek() {
     return *scanner.current;
 }

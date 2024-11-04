@@ -8,6 +8,7 @@
 #include "common.h"
 #include "value.h"
 
+// 演算コード
 typedef enum {
     OP_CONSTANT,
     OP_NIL,

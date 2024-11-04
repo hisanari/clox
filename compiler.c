@@ -96,6 +96,7 @@ static void advance() {
     }
 }
 
+// 現在のトークンを消費(処理)して次に進む関数
 static void consume(TokenType type, const char* message) {
     if (parser.current.type == type) {
         advance();
