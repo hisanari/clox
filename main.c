@@ -20,7 +20,7 @@ static void repl() {
     }
 }
 
-// read sorce file
+// read source file
 static char* readFile(const char* path) {
     FILE* file = fopen(path, "rb");
     if (file == NULL) {
